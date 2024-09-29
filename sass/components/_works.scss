@@ -1,0 +1,97 @@
+.works-list {
+  @extend %list;
+}
+
+.works-list__card {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.works-list__link {
+  display: block;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: box-shadow 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: $work-card-shadow;
+  }
+}
+
+.works-list__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-list__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include centeredFlex();
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: $works-overlay-color;
+
+  transform: translateY(100%);
+  opacity: 0;
+  // добавил прозрачность, чтобы решить проблему выпадения полоски оверлея при
+  // изменении ширины вьюпорта
+  transition: transform 250ms $timing-function;
+
+  .works-list__link:hover &,
+  .works-list__link:focus & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 479px) {
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+  }
+}
+
+.works-list__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $primary-white-color;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  @media screen and (max-width: 479px) {
+    font-size: 3.7vmin;
+  }
+}
+
+.works-list__content {
+  padding: 20px 24px;
+  border: 1px solid $border-color;
+  border-top: none;
+}
+
+.works-list__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: $title-text-color;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.works-list__type {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.88;
+}

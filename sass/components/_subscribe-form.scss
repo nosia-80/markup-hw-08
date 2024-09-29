@@ -1,0 +1,46 @@
+.subscribe-form__field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.subscribe-form__input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 4px;
+  box-shadow: $primary-box-shadow;
+  border: 1px solid $footer-input-border-color;
+  background-color: transparent;
+
+  color: $primary-white-color;
+  letter-spacing: 0.03em;
+}
+
+.subscribe-form__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%) scale(1);
+  transform-origin: left;
+
+  color: $footer-contact-color;
+
+  transition: color 250ms $timing-function, transform 250ms $timing-function;
+
+  .subscribe-form__input:focus + &,
+  .subscribe-form__input:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translate(-16px, -46px) scale(0.875);
+  }
+
+  // .subscribe-form__field:focus-within > &,
+  // .subscribe-form__input:not(:placeholder-shown) + & {
+  //   color: $accent-color;
+  //   transform: translate(-16px, -46px) scale(0.875);
+  // }
+}
+
+.subscribe-form__input,
+.subscribe-form__label {
+  font-size: 16px;
+  line-height: 1.25;
+}

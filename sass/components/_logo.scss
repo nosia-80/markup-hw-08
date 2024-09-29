@@ -1,0 +1,13 @@
+.logo {
+  color: $title-text-color;
+  font-family: $logo-font;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-decoration: none;
+
+  &--accent {
+    color: $accent-color;
+  }
+}

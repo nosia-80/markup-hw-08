@@ -1,0 +1,28 @@
+.footer-address {
+  margin-top: 20px;
+  color: $primary-white-color;
+  font-style: normal;
+}
+
+.footer-address__item {
+  &:not(:first-child) {
+    margin-top: 4px;
+  }
+}
+
+.footer-address__list {
+  @extend %list;
+  margin-top: 4px;
+}
+
+.footer-address__link {
+  color: $footer-contact-color;
+  text-decoration: none;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

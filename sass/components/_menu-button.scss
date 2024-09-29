@@ -1,0 +1,46 @@
+.menu-button {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  // z-index: 2;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  & .menu-button__cross {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  & .menu-button__menu {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &--open {
+    z-index: 2;
+
+    .menu-button__cross {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .menu-button__menu {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+}
+
+.menu-button__cross,
+.menu-button__menu {
+  fill: currentColor;
+
+  transform-origin: center;
+  transition: opacity 250ms $timing-function, transform 250ms $timing-function;
+}

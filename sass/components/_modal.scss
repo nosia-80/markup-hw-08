@@ -1,0 +1,15 @@
+.modal {
+  position: relative;
+
+  border-radius: 4px;
+  background-color: $primary-white-color;
+  box-shadow: $secondary-box-shadow;
+
+  transform: scale(1);
+
+  transition: transform 250ms $timing-function;
+
+  .backdrop--hidden & {
+    transform: scale(1.1);
+  }
+}
