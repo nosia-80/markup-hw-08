@@ -1,30 +1,43 @@
 .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  background-color: $primary-white-color;
+  @include limitedWidth($tablet - 1px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $primary-white-color;
 
-  transform: translateX(100%);
-  transition: transform 250ms $timing-function;
+    transform: translateX(100%);
+    transition: transform 250ms $timing-function;
 
-  &--open {
-    transform: translateX(0);
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
+  @include breakpoint($tablet) {
+    flex-grow: 1;
+    margin-left: 88px;
   }
 }
 
 .menu-container__inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  @include limitedWidth($tablet - 1px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
-  max-width: 450px;
+    max-width: $mobile - 30px;
+  }
+
+  @include breakpoint($tablet) {
+    @include centeredFlex($main-axis: space-between);
+  }
 }

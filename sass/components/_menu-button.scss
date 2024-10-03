@@ -3,9 +3,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  // z-index: 2;
 
   transition: color 250ms $timing-function;
+
+  @include breakpoint($tablet) {
+    display: none;
+  }
 
   &:hover,
   &:focus {

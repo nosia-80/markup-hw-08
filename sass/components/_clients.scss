@@ -8,6 +8,10 @@
 .clients-list__item {
   flex-basis: calc((100% - 2 * 30px) / 2);
   margin: 15px;
+
+  @include breakpoint($tablet) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .clients-list__link {

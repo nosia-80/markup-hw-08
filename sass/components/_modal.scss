@@ -9,6 +9,12 @@
 
   transition: transform 250ms $timing-function;
 
+  @include breakpoint($mobile) {
+    width: $mobile - 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .backdrop--hidden & {
     transform: scale(1.1);
   }

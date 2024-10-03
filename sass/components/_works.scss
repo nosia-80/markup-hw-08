@@ -1,12 +1,25 @@
 .works-list {
   @extend %list;
+
+  @include breakpoint($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .works-list__card {
-  margin-bottom: 30px;
+  @include limitedWidth($tablet - 1px) {
+    margin-bottom: 30px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
 }
 
@@ -17,6 +30,12 @@
   text-decoration: none;
 
   transition: box-shadow 250ms $timing-function;
+
+  @include breakpoint($tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &:hover,
   &:focus {
@@ -76,6 +95,10 @@
   padding: 20px 24px;
   border: 1px solid $border-color;
   border-top: none;
+
+  @include breakpoint($tablet) {
+    flex-grow: 1;
+  }
 }
 
 .works-list__title {

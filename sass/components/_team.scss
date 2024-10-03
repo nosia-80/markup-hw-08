@@ -1,5 +1,11 @@
 .team-members {
   @extend %list;
+
+  @include breakpoint($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team-members__card {
@@ -9,7 +15,14 @@
   overflow: hidden;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    @include limitedWidth($tablet - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
 }
 
