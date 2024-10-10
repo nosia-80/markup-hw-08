@@ -4,8 +4,32 @@
   }
 }
 
+// @mixin mobile {
+//   @media screen and (min-width: map-get($breakpoints, 'mobile')) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet {
+//   @media screen and (min-width: map-get($breakpoints, 'tablet')) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+//     @content;
+//   }
+// }
+
 @mixin limitedWidth($max-width) {
   @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin cuttedWidth($min-width, $max-width) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
     @content;
   }
 }

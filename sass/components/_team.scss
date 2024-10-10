@@ -24,12 +24,20 @@
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
+
+  @include breakpoint($desktop) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
 }
 
 .team-members__worker {
   padding: 30px 24px 24px;
   text-align: center;
   background-color: $primary-white-color;
+
+  @include breakpoint($desktop) {
+    padding-bottom: 30px;
+  }
 }
 
 .team-members__name {

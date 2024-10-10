@@ -2,7 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer-bg-color;
-  text-align: center;
+
+  @include limitedWidth($desktop - 1px) {
+    text-align: center;
+  }
 }
 
 .page-footer__logo {
@@ -18,7 +21,7 @@
 }
 
 .page-footer__address {
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     flex-basis: 50%;
   }
 }
@@ -28,8 +31,12 @@
     margin-top: 60px;
   }
 
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     flex-basis: 50%;
+  }
+
+  @include breakpoint($desktop) {
+    margin-left: 85px;
   }
 }
 
@@ -43,11 +50,17 @@
 }
 
 .page-footer__form {
-  margin-top: 60px;
+  @include limitedWidth($desktop - 1px) {
+    margin-top: 60px;
+  }
 
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     flex-basis: 450px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include breakpoint($tablet) {
+    margin-left: auto;
   }
 }

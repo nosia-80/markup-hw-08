@@ -32,9 +32,11 @@
 }
 
 .checkbox__label {
-  font-size: 12px;
-  line-height: 1.17;
-  text-align: left;
+  @include limitedWidth($desktop - 1px) {
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: left;
+  }
 
   &--accent {
     color: $accent-color;

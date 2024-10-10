@@ -16,6 +16,12 @@
   visibility: visible;
   transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
 
+  // @include breakpoint($desktop) {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
   &--hidden {
     visibility: hidden;
     opacity: 0;

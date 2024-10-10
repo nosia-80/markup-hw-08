@@ -1,6 +1,20 @@
+.subscribe-form {
+  @include breakpoint($desktop) {
+    display: flex;
+  }
+}
+
 .subscribe-form__field {
   position: relative;
-  margin-bottom: 20px;
+
+  @include limitedWidth($desktop - 1px) {
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint($desktop) {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscribe-form__input {

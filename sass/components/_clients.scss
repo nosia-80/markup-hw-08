@@ -12,6 +12,10 @@
   @include breakpoint($tablet) {
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
+
+  @include breakpoint($desktop) {
+    flex-basis: calc((100% - 6 * 30px) / 6);
+  }
 }
 
 .clients-list__link {

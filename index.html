@@ -215,6 +215,92 @@
         </div>
       </section>
 
+      <!-- Чем мы занимаемся -->
+      <section class="section section--no-padding-t section--hidden">
+        <div class="container">
+          <h2 class="section__title">Чем мы занимаемся</h2>
+
+          <ul class="gallery-list">
+            <li class="gallery-list__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-1.webp    1x,
+                    ./images/gallery/img-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/gallery/img-1.jpg    1x,
+                    ./images/gallery/img-1@2x.jpg 2x
+                  "
+                  src="./images/gallery/img-1.jpg"
+                  alt="Разработчик пишет код"
+                  width="370"
+                  loading="lazy"
+                /><!-- в идеале указывать height;
+                картинка грузится только тогда, когда она визуально нужна на экране -->
+              </picture>
+              <div class="gallery-list__overlay">
+                <h3 class="gallery-list__title">Десктопные приложения</h3>
+              </div>
+            </li>
+            <li class="gallery-list__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-2.webp    1x,
+                    ./images/gallery/img-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/gallery/img-2.jpg    1x,
+                    ./images/gallery/img-2@2x.jpg 2x
+                  "
+                  src="./images/gallery/img-2.jpg"
+                  alt="Разработчик создаёт кроссплатформенный сайт"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="gallery-list__overlay">
+                <h3 class="gallery-list__title">Мобильные приложения</h3>
+              </div>
+            </li>
+            <li class="gallery-list__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-3.webp    1x,
+                    ./images/gallery/img-3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/gallery/img-3.jpg    1x,
+                    ./images/gallery/img-3@2x.jpg 2x
+                  "
+                  src="./images/gallery/img-3.jpg"
+                  alt="Разработчик выбирает палитру"
+                  width="370"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="gallery-list__overlay">
+                <h3 class="gallery-list__title">Дизайнерские решения</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <!-- Наша команда -->
       <section class="section section--secondary">
         <div class="container">
@@ -223,6 +309,22 @@
           <ul class="team-members">
             <li class="team-members__card">
               <picture>
+                <source
+                  srcset="
+                    ./images/team/photo-1/photo-1-desktop.webp    1x,
+                    ./images/team/photo-1/photo-1-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-1/photo-1-desktop.jpg    1x,
+                    ./images/team/photo-1/photo-1-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
                 <source
                   srcset="
                     ./images/team/photo-1/photo-1-tablet.webp    1x,
@@ -260,6 +362,7 @@
                   alt="Фото Игоря Демьяненко"
                 />
               </picture>
+              <!-- Дескриптор x -->
               <!-- <img
                 srcset="
                   ./images/team/photo-1/photo-1-mobile.jpg    1x,
@@ -269,6 +372,23 @@
                 alt="Фото Игоря Демьяненко"
                 width="450"
               /> -->
+
+              <!-- Дескриптор w -->
+              <!-- <picture>
+                <img
+                  srcset="
+                    ./images/team/photo-1/photo-1-desktop.jpg    270w,
+                    ./images/team/photo-1/photo-1-tablet.jpg     354w,
+                    ./images/team/photo-1/photo-1-mobile.jpg     450w,
+                    ./images/team/photo-1/photo-1-desktop@2x.jpg 540w,
+                    ./images/team/photo-1/photo-1-tablet@2x.jpg  708w,
+                    ./images/team/photo-1/photo-1-mobile@2x.jpg  900w
+                  "
+                  src="./images/team/photo-1/photo-1-desktop.jpg"
+                  alt="Фото Игоря Демьяненко"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (max-width: 767px) 450px, 100vw"
+                />
+              </picture> -->
               <div class="team-members__worker">
                 <h3 class="team-members__name">Игорь Демьяненко</h3>
                 <p class="team-members__position" lang="en">Product Designer</p>
@@ -324,6 +444,22 @@
             </li>
             <li class="team-members__card">
               <picture>
+                <source
+                  srcset="
+                    ./images/team/photo-2/photo-2-desktop.webp    1x,
+                    ./images/team/photo-2/photo-2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-2/photo-2-desktop.jpg    1x,
+                    ./images/team/photo-2/photo-2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
                 <source
                   srcset="
                     ./images/team/photo-2/photo-2-tablet.webp    1x,
@@ -420,6 +556,22 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team/photo-3/photo-3-desktop.webp    1x,
+                    ./images/team/photo-3/photo-3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-3/photo-3-desktop.jpg    1x,
+                    ./images/team/photo-3/photo-3-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
                     ./images/team/photo-3/photo-3-tablet.webp    1x,
                     ./images/team/photo-3/photo-3-tablet@2x.webp 2x
                   "
@@ -510,6 +662,22 @@
             </li>
             <li class="team-members__card">
               <picture>
+                <source
+                  srcset="
+                    ./images/team/photo-4/photo-4-desktop.webp    1x,
+                    ./images/team/photo-4/photo-4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-4/photo-4-desktop.jpg    1x,
+                    ./images/team/photo-4/photo-4-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
                 <source
                   srcset="
                     ./images/team/photo-4/photo-4-tablet.webp    1x,

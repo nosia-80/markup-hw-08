@@ -1,0 +1,49 @@
+.gallery-list {
+  @extend %list;
+  @include centeredFlex($main-axis: space-between, $cross-axis: stretch);
+}
+
+.gallery-list__item {
+  position: relative;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.gallery-list__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  padding: 27px 24px;
+  background-color: $gallery-overlay-color;
+}
+
+.gallery-list__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $primary-white-color;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+// Альтернатива без дополнительного блока
+// .gallery-list__title {
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding: 27px 24px;
+
+//   color: $primary-white-color;
+//   background-color: $gallery-overlay-color;
+
+//   font-size: 14px;
+//   line-height: 1.14;
+//   text-transform: uppercase;
+//   text-align: center;
+// }

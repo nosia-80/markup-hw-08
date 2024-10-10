@@ -7,13 +7,13 @@
     margin-bottom: 64px;
   }
 
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     flex-direction: column;
   }
 }
 
 .contacts-header__item {
-  @include breakpoint($tablet) {
+  @include cuttedWidth($tablet, $desktop - 1px) {
     display: flex;
   }
 
@@ -22,8 +22,12 @@
       margin-top: 32px;
     }
 
-    @include breakpoint($tablet) {
+    @include cuttedWidth($tablet, $desktop - 1px) {
       margin-bottom: 10px;
+    }
+
+    @include breakpoint($desktop) {
+      margin-right: 30px;
     }
   }
 }
@@ -33,13 +37,13 @@
   color: inherit;
 
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
 
   @include limitedWidth($tablet - 1px) {
     &--mail {
       font-size: 24px;
-      line-height: 1.17;
     }
 
     &--tel {
@@ -52,15 +56,45 @@
 
   @include breakpoint($tablet) {
     @include centeredFlex(inline-flex);
-
     font-size: 12px;
-    line-height: 1.17;
 
     transition: color 250ms $timing-function;
 
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+  }
+
+  @include breakpoint($desktop) {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 31px;
+
+    font-size: 14px;
+    line-height: 1.14;
+
+    &::after {
+      display: block;
+      content: '';
+
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+
+      transform: scaleX(0);
+      transform-origin: left;
+
+      transition: transform 250ms $timing-function;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
     }
   }
 }
@@ -70,9 +104,16 @@
   display: none;
 
   &--tablet {
-    @include breakpoint($tablet) {
+    @include cuttedWidth($tablet, $desktop - 1px) {
       display: block;
       margin-right: 8px;
+    }
+  }
+
+  &--desktop {
+    @include breakpoint($desktop) {
+      display: block;
+      margin-right: 10px;
     }
   }
 }

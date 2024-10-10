@@ -12,6 +12,10 @@
     justify-content: center;
     margin-bottom: 30px;
   }
+
+  @include breakpoint($desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {

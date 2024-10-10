@@ -22,6 +22,10 @@
     flex-grow: 1;
     margin-left: 88px;
   }
+
+  @include breakpoint($desktop) {
+    margin-left: 93px;
+  }
 }
 
 .menu-container__inner {

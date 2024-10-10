@@ -10,6 +10,10 @@
 
   font-size: 20px;
   line-height: 1.5;
+
+  @include breakpoint($desktop) {
+    line-height: 1.15;
+  }
 }
 
 .application-form__field {

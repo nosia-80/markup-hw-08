@@ -4,15 +4,23 @@
   font-style: normal;
 }
 
-.footer-address__item {
-  &:not(:first-child) {
-    margin-top: 4px;
-  }
-}
-
 .footer-address__list {
   @extend %list;
   margin-top: 4px;
+
+  @include breakpoint($desktop) {
+    margin-top: 5px;
+  }
+}
+
+.footer-address__item {
+  &:not(:first-child) {
+    margin-top: 4px;
+
+    @include breakpoint($desktop) {
+      margin-top: 5px;
+    }
+  }
 }
 
 .footer-address__link {
