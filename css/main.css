@@ -66,6 +66,13 @@ img {
   line-height: 1.17;
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    color: #000000;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 .logo--accent {
   color: #2196f3;
 }
