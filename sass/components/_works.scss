@@ -104,6 +104,26 @@
     padding-left: 5vmin;
     padding-right: 5vmin;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 40%;
+    height: 170%;
+    background-color: $primary-white-color;
+    opacity: 0.2;
+
+    transform: translate(-190%, -20%) rotate(35deg);
+
+    transition: transform 550ms $timing-function 250ms;
+  }
+
+  .works-list__link:hover &::before {
+    transform: translate(350%, -20%) rotate(35deg);
+  }
 }
 
 .works-list__description {
